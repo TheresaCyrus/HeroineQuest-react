@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Battlesystem from './Container/Battlesystem/Battlesystem';
 import Home from './Home'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App (){
