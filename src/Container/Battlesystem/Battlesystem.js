@@ -6,8 +6,6 @@ import Monster from '../Monster/Monster'
 import Victory from '../Victory/Victory';
 import enemyAttackImg from '../../Images/images/lightning01.gif';
 import playerAttackImg from '../../Images/images/shadow-spear-effect.gif';
-import Button from 'react-bootstrap/Button';
-import background from '../../Images/images/empty_stage_1.png';
 import '../../index.css'
 
 
