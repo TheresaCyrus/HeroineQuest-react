@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import API_ROOT from '../../apiRoot'
 import { Link } from 'react-router-dom';
 import Hero from '../Hero/Hero'
 import Monster from '../Monster/Monster'
@@ -29,7 +30,7 @@ class Battlesystem extends Component {
     }
     
     componentDidMount() {
-        fetch(`http://localhost:3000/heros`)
+        fetch(`${API_ROOT}/heros`)
         .then(res => res.json())
         .then((response) => {
           
@@ -41,7 +42,7 @@ class Battlesystem extends Component {
         )
     
     
-        fetch(`http://localhost:3000/monsters`)
+        fetch(`${API_ROOT}/monsters`)
         .then(res => res.json())
         .then((response) => {
           this.setState({monster: response[0]})
