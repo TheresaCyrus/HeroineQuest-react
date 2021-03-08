@@ -10,6 +10,7 @@ import '../../index.css'
 
 
 
+
 class Battlesystem extends Component {
 
     constructor(props) {
@@ -34,7 +35,6 @@ class Battlesystem extends Component {
         .then((response) => {
           
           this.setState({hero: response[0]})
-          // console.log( "current hero", this.state.hero)
           
           }
           
@@ -45,8 +45,7 @@ class Battlesystem extends Component {
         .then(res => res.json())
         .then((response) => {
           this.setState({monster: response[0]})
-          // console.log( "current Monster", this.state.monster)
-        
+          console.log("monster", this.state.monster.hp)
         })
       }
 
@@ -56,7 +55,7 @@ class Battlesystem extends Component {
       setTimeout(()=>{
         this.setState({playerAtk: true}, ()=>{
           let currentDamage = this.state.monster.hp - this.state.hero.atk 
-         
+      
           if(currentDamage <= 0){  
        
             currentDamage = 0
@@ -132,11 +131,11 @@ class Battlesystem extends Component {
   }
 
 
- 
+
 
 
 render(){
-  console.log("Victory:", this.state.isVictoryVisible)
+
 
   const BattleScene = (
     <div className="battle-scene">   
@@ -145,7 +144,8 @@ render(){
 
                {this.state.playerAtk ? <img className="atk-img" src={playerAttackImg} alt="player" /> : null }
              
-               <Monster />
+               <Monster monster={this.state.monster}/>
+             
                 <br></br><br></br>
 
 
@@ -166,7 +166,6 @@ render(){
         return(
           <div className="main-div">
 
-          {/* {`Monster:${this.state.monster.hp}  Hero:${this.state.hero.hp}` } */}
           
           {this.state.isBattleSceneVisible ? BattleScene : null}
           <br/>
@@ -174,8 +173,14 @@ render(){
           <br/>
           {this.state.isGameoverVisible ? 'game over' : null }
 
-          
-          
+          <div className="monster-health">
+          Monster Health :{this.state.monster.hp}
+          </div>
+
+          <div className="hero-health">
+          Hero Health :{this.state.hero.hp}
+          </div>
+
           </div>
             
       )

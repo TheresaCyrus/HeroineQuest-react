@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
+import {Button} from 'react-bootstrap'
+import '../../index.css'
 
 function Victory () {
 
     return(
       
-      <div>
-          I WON BITCHES
+      <div className="victory">
+      
           <br></br>
-          <Link to="/">HOME</Link>
+          {/* <Link to="/" className="">HOME</Link> */}
+          <Button className="home-btn" href="/">Home</Button>
       </div>
 
      
