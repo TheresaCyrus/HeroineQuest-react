@@ -13,6 +13,8 @@ Once you're in battle you'll have a set of commands which you can use to either 
 
 Select 'Attack' to attack and 'Spell' to use a spell.
 
+Watch your health on the right side of the screen, make sure you attack the enemy until their Health Point's (Hp) reach zero to win!
+
 If you're feeling down on luck you can select 'Run' , live another day to tell the tale!
 
 
