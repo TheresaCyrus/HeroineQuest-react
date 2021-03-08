@@ -7,7 +7,7 @@ When you attack a monster they might attack back! Enjoy taking turns attacking t
 
 #GOLDEN PATH
 
-Select 'START' to begin your your first encounter 
+Select 'START' to begin your first encounter. 
 
 Once you're in battle you'll have a set of commands which you can use to either defeat the deamon or run.
 
