@@ -8,6 +8,7 @@ import enemyAttackImg from '../../Images/images/lightning01.gif';
 import playerAttackImg from '../../Images/images/shadow-spear-effect.gif';
 import '../../index.css'
 import battleMusic from '../../audio/battletheme.mp3'
+import Loading from '../../Container/Loading/Loading'
 
 
 
@@ -21,16 +22,19 @@ class Battlesystem extends Component {
             hero: {},
             monster: {},
             isControlsVisible: true,
-            isBattleSceneVisible: true,
+            isBattleSceneVisible: false,
             isVictoryVisible: false,
             isGameoverVisible: false,
             enemyAtk: false,
-            playerAtk: false
+            playerAtk: false,
+            isLoadScreenVisible: true
             
         }
     }
     
     componentDidMount() {
+      
+
         fetch(`${API_ROOT}/heros`)
         .then(res => res.json())
         .then((response) => {
@@ -46,8 +50,14 @@ class Battlesystem extends Component {
         .then(res => res.json())
         .then((response) => {
           this.setState({monster: response[0]})
-          console.log("monster", this.state.monster.hp)
+ 
         })
+
+           this.setState({
+             isLoadScreenVisible: false ,   isBattleSceneVisible: true,
+
+           })
+          //  console.log("componentDidMount")
       }
 
     
@@ -172,7 +182,7 @@ render(){
 
                 
                 <div>
-                   <audio src={battleMusic}  controls autoPlay display hidden/>
+                   <audio src={battleMusic}  controls autoPlay hidden/>
                 </div>
                
             </div>
@@ -189,6 +199,9 @@ render(){
           {this.state.isVictoryVisible ? <Victory />:null }
           <br/>
           {this.state.isGameoverVisible ? 'game over' : null }
+          <br/>
+          {this.state.isLoadScreenVisible ? <Loading />: null }
+
 
 
           </div>
