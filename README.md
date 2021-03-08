@@ -9,11 +9,11 @@ When you attack a monster they might attack back! Enjoy taking turns attacking t
 
 Select 'START' to begin your your first encounter 
 
-Once you're in battle you'll have a set of commads which you can use to either defeat the deamon or run.
+Once you're in battle you'll have a set of commands which you can use to either defeat the deamon or run.
 
-Select 'Attack' to attack and 'Spell' to use a spell
+Select 'Attack' to attack and 'Spell' to use a spell.
 
-If you're feelin down on luck you can select 'Run' , live another day to tell the tale!
+If you're feeling down on luck you can select 'Run' , live another day to tell the tale!
 
 
 
