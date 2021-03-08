@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Heroine Quest
 
 Heroine Quest is a JRPG (Japanese Role Playing) inspired turn-based game. 
 As a player you'll encounter your first monster while exploring your surroundings.
