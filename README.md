@@ -5,7 +5,7 @@ As a player you'll encounter your first monster while exploring your surrounding
 When you attack a monster they might attack back! Enjoy taking turns attacking the deamons lurking in the shadows while on your journey .
 
 
-##GOLDEN PATH
+#GOLDEN PATH
 
 Select 'START' to begin your your first encounter 
 
