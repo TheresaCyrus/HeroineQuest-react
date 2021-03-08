@@ -7,6 +7,7 @@ import Victory from '../Victory/Victory';
 import enemyAttackImg from '../../Images/images/lightning01.gif';
 import playerAttackImg from '../../Images/images/shadow-spear-effect.gif';
 import '../../index.css'
+import battleMusic from '../../audio/battletheme.mp3'
 
 
 
@@ -146,18 +147,34 @@ render(){
              
                <Monster monster={this.state.monster}/>
              
-                <br></br><br></br>
+               <br></br><br></br>
 
 
 
                <div className="controller"> 
-                {this.state.isControlsVisible ? <button className="btn-atk btn btn-danger" onClick={this.handleAttk}>Attack</button> : null} 
-                {this.state.isControlsVisible ? <button className="btn-spell btn btn-primary" onClick={this.handleSpell}>Spell</button>: null}
-                {this.state.isControlsVisible ? <Link className="btn-run btn btn-success" to="/">Run</Link>: null}
+                  {this.state.isControlsVisible ? <button className="btn-atk btn btn-danger" onClick={this.handleAttk}>Attack</button> : null} 
+                  {this.state.isControlsVisible ? <button className="btn-spell btn btn-primary" onClick={this.handleSpell}>Spell</button>: null}
+                  {this.state.isControlsVisible ? <Link className="btn-run btn btn-success" to="/">Run</Link>: null}
+                
                 <Hero />
+               
                 </div>
 
                 <br></br><br></br>
+
+                <div className="monster-health">
+                    Monster Health :{this.state.monster.hp}
+                </div>
+
+                <div className="hero-health">
+                    Hero Health :{this.state.hero.hp}
+                </div>
+
+                
+                <div>
+                   <audio src={battleMusic}  controls autoPlay display hidden/>
+                </div>
+               
             </div>
           
   )
@@ -173,13 +190,6 @@ render(){
           <br/>
           {this.state.isGameoverVisible ? 'game over' : null }
 
-          <div className="monster-health">
-          Monster Health :{this.state.monster.hp}
-          </div>
-
-          <div className="hero-health">
-          Hero Health :{this.state.hero.hp}
-          </div>
 
           </div>
             

@@ -85,10 +85,10 @@ code {
  }
 
 .hero-health{
-  transform: translate(1000px, -3200%);
+  transform: translate(1000px, -1500%);
 }
 .monster-health{
-  transform: translate(1000px, -3200%);
+  transform: translate(1000px, -1500%);
 }
 
 .battle-scene {
