@@ -18,7 +18,7 @@ Watch your health on the right side of the screen, make sure you attack the enem
 If you're feeling down on luck you can select 'Run' , live another day to tell the tale!
 
 
-
+Update: Look forward to the 2025 REMASTER!! 🤯
 
 
 
